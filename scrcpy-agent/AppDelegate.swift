@@ -10,11 +10,27 @@ import Cocoa
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.variableLength)
     
-
+    let popover = NSPopover()
+    
+    var eventMonitor: EventMonitor?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        if let button = self.statusItem.button {
+            button.image = NSImage(named: NSImage.Name("AgentIcon"))
+            button.action = #selector(AppDelegate.togglePopover(_:))
+        }
+        self.popover.contentViewController = ViewController.newInstance()
+        self.popover.animates = true
+        self.popover.behavior = NSPopover.Behavior.transient
+        
+        self.eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown]) { [weak self] event in
+            if let strongSelf = self, strongSelf.popover.isShown {
+                strongSelf.closePopover(sender: event)
+            }
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -122,5 +138,25 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return .terminateNow
     }
 
+    @objc func togglePopover(_ sender: NSStatusItem) {
+        if self.popover.isShown {
+            closePopover(sender: sender)
+        }
+        else {
+            showPopover(sender: sender)
+        }
+    }
+    
+    func showPopover(sender: Any?) {
+        if let button = self.statusItem.button {
+            self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+            self.eventMonitor?.start()
+        }
+    }
+
+    func closePopover(sender: Any?)  {
+        self.popover.performClose(sender)
+        self.eventMonitor?.stop()
+    }
 }
 

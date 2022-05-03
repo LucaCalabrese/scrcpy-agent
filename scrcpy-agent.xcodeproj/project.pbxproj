@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6371F6C027FC37530081882F /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6371F6BF27FC37530081882F /* EventMonitor.swift */; };
 		6389CD6C27FB3B1300FCB4E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6389CD6B27FB3B1300FCB4E9 /* AppDelegate.swift */; };
 		6389CD6E27FB3B1300FCB4E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6389CD6D27FB3B1300FCB4E9 /* ViewController.swift */; };
 		6389CD7127FB3B1300FCB4E9 /* scrcpy_agent.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6389CD6F27FB3B1300FCB4E9 /* scrcpy_agent.xcdatamodeld */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6371F6BF27FC37530081882F /* EventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 		6389CD6827FB3B1300FCB4E9 /* scrcpy-agent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "scrcpy-agent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6389CD6B27FB3B1300FCB4E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6389CD6D27FB3B1300FCB4E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +49,7 @@
 		6389CD8627FB3B1400FCB4E9 /* scrcpy-agentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "scrcpy-agentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6389CD8A27FB3B1400FCB4E9 /* scrcpy_agentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scrcpy_agentUITests.swift; sourceTree = "<group>"; };
 		6389CD8C27FB3B1400FCB4E9 /* scrcpy_agentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scrcpy_agentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6389CD9927FB3B7400FCB4E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +100,10 @@
 		6389CD6A27FB3B1300FCB4E9 /* scrcpy-agent */ = {
 			isa = PBXGroup;
 			children = (
+				6389CD9927FB3B7400FCB4E9 /* Info.plist */,
 				6389CD6B27FB3B1300FCB4E9 /* AppDelegate.swift */,
 				6389CD6D27FB3B1300FCB4E9 /* ViewController.swift */,
+				6371F6BF27FC37530081882F /* EventMonitor.swift */,
 				6389CD7227FB3B1300FCB4E9 /* Assets.xcassets */,
 				6389CD7427FB3B1300FCB4E9 /* Main.storyboard */,
 				6389CD7727FB3B1300FCB4E9 /* scrcpy_agent.entitlements */,
@@ -257,6 +262,7 @@
 				6389CD6E27FB3B1300FCB4E9 /* ViewController.swift in Sources */,
 				6389CD7127FB3B1300FCB4E9 /* scrcpy_agent.xcdatamodeld in Sources */,
 				6389CD6C27FB3B1300FCB4E9 /* AppDelegate.swift in Sources */,
+				6371F6C027FC37530081882F /* EventMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +433,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "scrcpy-agent/Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -452,6 +459,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "scrcpy-agent/Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
