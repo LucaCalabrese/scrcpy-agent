@@ -11,3 +11,7 @@
 3. Right-click on `scrcpy-agent` app and choose `Open`. 
 
 4. In the warning popup click `Open`.
+
+## Acknowledgments
+
+I used this example from David Caddy as a template: https://github.com/davidcaddy/MenuBarPopoverExample
