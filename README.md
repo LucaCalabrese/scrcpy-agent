@@ -4,7 +4,7 @@
 
 1. [Install scrcpy](https://github.com/Genymobile/scrcpy#macos)   
 
-2. Download the latest version of [scrcpy-agent binary](https://github.com/LucaCalabrese/scrcpy-agent/raw/main/dist/scrcpy-agent-1.0/scrcpy-agent.app/Contents/MacOS/scrcpy-agent)
+2. Download the latest version of [scrcpy-agent binary](https://github.com/LucaCalabrese/scrcpy-agent/raw/main/dist/scrcpy-agent-1.0/scrcpy-agent.app)
 
 3. Right-click on `scrcpy-agent` app and choose `Open`. 
 
